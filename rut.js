@@ -23,10 +23,10 @@ document.getElementById("dv").addEventListener("blur", (e) => {
   
   if( !permitidos.includes(dv) ) {
   	// muestro mensaje de error
-      document.getElementById("feedback-rut").classList.remove("d-none");
+      document.getElementById("feedback-dv").classList.remove("d-none");
   }
   else {
-    document.getElementById("feedback-rut").classList.add("d-none")
+    document.getElementById("feedback-dv").classList.add("d-none")
 
   }
 });
