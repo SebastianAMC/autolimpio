@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLimpio - Creación orden de trabajo</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"  href="style.css" />
+    <!-- <script type = "text/javascript" src = "script.js"></script> -->
+
+</head>
+
+<body class="bg">
+    <div class="container  my-5 bg-light bg-opacity-75">
+        <div class="col-12 mx-auto text-center">
+            <img src="img/logo.png">
+            </div>
+            <h1 class="text-center my-5">Orden de trabajo</h1>
+
+        <div class="row mb-5">
+            <form action="servicios.html"  id="servicios" class="row w-50" method="post">
+            <div style="margin-left: 50%;">
+                <div class="col-md-12 mb-3 bg-light p-2">
+                    <input type="checkbox"  id="exterior" class="form-check-input" value="7000">
+                    <label for="exterior" class="form-label">Lavado exterior $7.000</label>
+                </div>
+                <div class="col-md-12 mb-3 bg-light p-2">
+                    <input type="checkbox"  id="motor" class="form-check-input" value="5000">
+                    <label for="motor" class="form-label">Lavado de motor $5.000</label>
+                </div>
+                <hr/>
+                <div class="row bg-light p-2">
+                    <div class="col-6 col-lg-1">
+                        Neto
+                    </div>
+                    <div id="neto" class="col-6 col-lg-3">
+                        $
+                    </div>
+                    <div class="col-6 col-lg-1">
+                        IVA
+                    </div>
+                    <div id="iva" class="col-6 col-lg-2">
+                        $
+                    </div>
+                    <div class="col-6 col-lg-2">
+                        TOTAL
+                    </div>
+                    <div id="total" class="col-6 col-lg-3">
+                        $
+                    </div>
+                </div>
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary my-5" type="button" id="calcular">Calcular</button>
+                </div>
+                
+                <div class="col-lg-4 col-12 mb-3">
+                    <label for="comuna" class="form-label">Encargado</label>
+                    <select class="form-control">
+                        <option>Juan Perez</option>
+                        <option>Julio Rosas</option>
+                        <option>Camilo Sanhueza</option>
+                        <option>Francisco Jara</option>
+                        <option>Raúl Troncoso</option>
+                    </select>  
+                </div>
+                <div class="col-lg-4 col-12 mb-3">
+                    <label for="fecha" class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="fecha" required>
+                    <div class="text-danger d-none" id="feedback-apellido"><h1>El apellido es muy corto</h1></div>
+                </div>
+                <div class="col-lg-4 col-12 mb-3">
+                    <label for="hora" class="form-label">Hora</label>
+                    <input type="time" class="form-control" id="hora" aria-describedby="validationServer03Feedback" required>
+                </div>
+                <div class="col-12 mt-5 text-center">
+                    <button class="btn btn-primary my-5" type="submit" id="enviarform">Enviar</button>
+                </div>
+            </div>     
+        </form> 
+        </div>
+    </div>
+
+
+ 
+ 
+
+<script src="servicios.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+</body>
+
+</html>

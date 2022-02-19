@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLimpio - Creación orden de trabajo</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"  href="style.css" />
+
+</head>
+
+<body class="bg">
+    <div class="container my-5 bg-light bg-opacity-75">
+        <div class="col-12 mx-auto text-center">
+        <img src="img/logo.png">
+        </div>
+        <h1 class="text-center my-5">Orden de trabajo</h1>
+        
+        <div class="row mb-5 w-50 mx-auto">
+            <form action="index.html"  id="clientes" method="get">
+              <label for="rut" class="form-label">Rut</label>
+                <div class="row">
+                    <div class="col-8 col-md-4 mb-3">
+                            <input type="text" class="form-control" id="rut" required>
+                    </div>
+                    <div class="col-4 col-md-2 mb-3">
+                            <input type="text" class="form-control" id="dv" required>
+                    </div>  
+                </div>
+                <div class="alert alert-danger col-lg-6 col-12 d-none" id="feedback-rut">
+                    El rut ingresado no es válido
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" maxlength="30" required>
+                    <div class="alert alert-danger col-lg-8 col-12 d-none mt-2" id="feedback-nombre">
+                        El nombre ingresado no es válido
+                    </div>
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="apellido" class="form-label">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" maxlength="30" required>
+                    <div class="alert alert-danger col-lg-8 col-12 d-none mt-2" id="feedback-apellido">
+                        El apellido ingresado no es válido
+                </div>
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" maxlength="80" required>
+                </div>
+                <div class="alert alert-danger col-lg-12 col-12 d-none mt-2" id="feedback-direccion">
+                    La dirección contiene caracteres no permitidos
+                </div>
+                <div class="col-md-4 col-12 mb-3">
+                    <label for="comuna" class="form-label">Comuna</label>
+                    <select class="form-control">
+                        <option>Temuco</option>
+                        <option>Padre las Casas</option>
+                        <option>Vilcún</option>
+                        <option>Nueva Imperial</option>
+                        <option>Pitrufquén</option>
+                    </select>  
+                </div>
+                <div class="col-12 mt-5 text-center">
+                    <button class="btn btn-primary my-5" type="submit" id="siguiente">Siguiente</button>
+                </div>
+               
+        </form> 
+        </div>
+    </div>
+
+
+<script src="rut.js"></script>
+</body>
+</html>

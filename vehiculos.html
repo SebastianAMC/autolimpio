@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoLimpio - Creación orden de trabajo</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet"  href="style.css" />
+
+</head>
+
+<body class="bg">
+  <div class="container my-5 bg-light bg-opacity-75">
+    <div class="col-12 mx-auto text-center">
+      <img src="img/logo.png">
+      </div>
+      <h1 class="text-center my-5">Orden de trabajo</h1>
+
+    <div class="row mb-5">
+        <form action="vehiculos.html"  id="vehiculos" class="row w-50" method="get">
+          <div style="margin-left: 50%;">
+            <div class="col-md-4 col-12 mb-3">
+                <label for="vehiculo" class="form-label">Tipo de vehículo</label>
+              <select class="form-control" id="vehiculo">
+                  <option>Furgón</option>
+                  <option>Automóvil</option>
+                  <option>Camión</option>
+                  <option>Camioneta</option>
+                  <option>Moto</option>
+              </select>  
+            </div>
+            <div class="col-12 mb-3">
+                <label for="marca" class="form-label">Marca</label>
+                <input type="text" class="form-control" id="marca" maxlength="20" required>
+                <div class="alert alert-danger col-lg-8 col-12 d-none mt-2" id="feedback-marca">
+                  Solo se aceptan letras
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+                <label for="modelo" class="form-label">Modelo</label>
+                <input type="text" class="form-control" id="modelo" maxlength="20" required>
+                <div class="alert alert-danger col-lg-8 col-12 d-none mt-2" id="feedback-modelo">
+                  Solo se aceptan letras
+              </div>
+            </div>
+            <div class="col-md-4 col-12 mb-3">
+                <label for="ano" class="form-label">Año</label>
+                <input type="number" maxlength="4" class="form-control" id="ano"  min="1950" max="2022" required>
+                <div class="text-danger d-none" id="feedback-nombre"><h1>El nombre es muy corto</h1></div>
+            </div>
+            <div class="col-md-4 col-12 mb-3">
+                <label for="RT" class="form-label">Revisión técnica al día:</label>
+              <select class="form-control" id="RT" required>
+                  <option>Sí</option>
+                  <option>No</option>
+              </select>  
+            </div>
+            <div class="col-12 mt-5 text-center">
+                <button class="btn btn-primary my-5" type="submit" id="enviarform">Siguiente</button>
+              </div>
+          </div>     
+      </form> 
+    </div>
+  </div>
+
+
+<script src="vehiculos.js"></script>
+</body>
+</html>
